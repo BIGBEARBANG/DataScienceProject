@@ -94,7 +94,7 @@ with st.echo(code_location='below'):
     institution_code=[3,3,1,4,1,3,3,4,4,1,2,4,1]
     df_prop['Institution Code']=institution_code
     list_codes=list(df_prop['Institution Code'].unique().astype(str))
-"""## Визуализация датасета о деятельности Музеев Великобритании """
+    """## Визуализация датасета о деятельности Музеев Великобритании """
     #BoxPlot
     fig=go.Figure()
     for dataset in list_index:
