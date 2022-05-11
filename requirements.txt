@@ -1,5 +1,4 @@
 pandas
-functools
 plotly
 seaborn
 numpy
