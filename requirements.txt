@@ -1,7 +1,6 @@
 pandas
 functools
-plotly.graph_objects
+plotly
 seaborn
-plotly.express
 numpy
 streamlit
