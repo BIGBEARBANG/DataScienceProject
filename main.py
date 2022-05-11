@@ -122,7 +122,7 @@ with st.echo(code_location='below'):
         autosize=False,
         width=1000,
         height=800)
-    fig.show()
+    st.pyplot(fig)
     ### END FROM
 
 
@@ -134,7 +134,7 @@ with st.echo(code_location='below'):
     mask[np.triu_indices_from(mask)] = True
     heat=sns.heatmap(df_m_corr,annot=True,xticklabels=False,mask=mask)
     heat.set_facecolor('xkcd:plum')
-    plt.show()
+    st.pyplot(heat)
 
     #Parallel Coordinates
     ### FROM: https://stackoverflow.com/questions/64100889/add-dropdown-menu-to-plotly-express-treemap
@@ -164,7 +164,7 @@ with st.echo(code_location='below'):
         direction='right'
     )]
     fig_par1 = go.Figure(data=traces, layout=dict(updatemenus=updatemenus))
-    fig_par1.show()
+    st.pyplot(fig_par1)
 
 
 
