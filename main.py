@@ -133,8 +133,8 @@ with st.echo(code_location='below'):
     mask[np.triu_indices_from(mask)] = True
     heat=sns.heatmap(df_m_corr,annot=True,xticklabels=False,mask=mask)
     heat.set_facecolor('xkcd:plum')
-    heat.figure.savefig('heat.png')
-    st.pyplot(heat)
+    fig_h=heat.get_figure()
+    st.pyplot(fig_h)
 
     #Parallel Coordinates
     ### FROM: https://stackoverflow.com/questions/64100889/add-dropdown-menu-to-plotly-express-treemap
