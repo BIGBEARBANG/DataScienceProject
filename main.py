@@ -133,6 +133,7 @@ with st.echo(code_location='below'):
     mask[np.triu_indices_from(mask)] = True
     heat=sns.heatmap(df_m_corr,annot=True,xticklabels=False,mask=mask)
     heat.set_facecolor('xkcd:plum')
+    heat.figure.savefig()
     st.pyplot(heat)
 
     #Parallel Coordinates
