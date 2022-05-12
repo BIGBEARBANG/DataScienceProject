@@ -122,7 +122,7 @@ with st.echo(code_location='below'):
         autosize=False,
         width=1000,
         height=800)
-    st.pyplot(fig)
+    st.plotly_chart(fig)
     ### END FROM
 
 
@@ -164,7 +164,7 @@ with st.echo(code_location='below'):
         direction='right'
     )]
     fig_par1 = go.Figure(data=traces, layout=dict(updatemenus=updatemenus))
-    st.pyplot(fig_par1)
+    st.plotly_chart(fig_par1)
 
 
 
