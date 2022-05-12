@@ -168,6 +168,7 @@ with st.echo(code_location='below'):
         direction='right'
     )]
     fig_par1 = go.Figure(data=traces, layout=dict(updatemenus=updatemenus))
+    fig_par1.update_layout(width=900)
     st.plotly_chart(fig_par1)
 
 
