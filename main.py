@@ -5,7 +5,6 @@ import seaborn as sns
 import plotly.express as px
 import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
 
 with st.echo(code_location='below'):
     xls=pd.read_excel('Museums Data_f.xlsx',sheet_name=None)
