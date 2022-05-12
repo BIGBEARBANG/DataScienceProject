@@ -94,9 +94,10 @@ with st.echo(code_location='below'):
     institution_code=[3,3,1,4,1,3,3,4,4,1,2,4,1]
     df_prop['Institution Code']=institution_code
     list_codes=list(df_prop['Institution Code'].unique().astype(str))
-    """## Визуализация датасета о деятельности Музеев Великобритании """
     
-    """## Распределение основных показателей """
+    st.title("Визуализация датасета о деятельности Музеев Великобритании")
+    
+    st.header("Распределение основных показателей")
     #BoxPlot
     fig=go.Figure()
     for dataset in list_index:
@@ -125,9 +126,9 @@ with st.echo(code_location='below'):
         height=800)
     st.plotly_chart(fig)
     ### END FROM
-    
+    st.text("Данные визуализованы в виде boxplot графиков, построенных в соответсвии с годовыми наблюдениями и расстортированных по типу данных") 
 
-    """## Корреляционная Матрица"""
+    st.header("Корреляция между основыми показателями музейной деятельности")
     #Heatmap
     df_m_corr=df_m.corr()
     sns.set(rc = {'figure.figsize':(20,10)})
@@ -138,8 +139,9 @@ with st.echo(code_location='below'):
     heat.set_facecolor('xkcd:plum')
     fig_h=heat.get_figure()
     st.pyplot(fig_h)
+    st.text("Данные для матрицы были усреднены - с 2008 до 2019 г")
     
-    """## Мультипликаторы Музейной Деятельности, группировка по типам институций """
+    st.header("Мультипликаторы Музейной Деятельности")
 
     #Parallel Coordinates
     ### FROM: https://stackoverflow.com/questions/64100889/add-dropdown-menu-to-plotly-express-treemap
@@ -170,6 +172,8 @@ with st.echo(code_location='below'):
     fig_par1 = go.Figure(data=traces, layout=dict(updatemenus=updatemenus))
     fig_par1.update_layout(width=900)
     st.plotly_chart(fig_par1)
+    
+    st.text("Данные сгруппированы по одному из 4 типов музейных институций")
 
 
 
