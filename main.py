@@ -139,7 +139,7 @@ with st.echo(code_location='below'):
     heat.set_facecolor('xkcd:plum')
     fig_h=heat.get_figure()
     st.pyplot(fig_h)
-    st.subheader("Данные для матрицы были усреднены - с 2008 до 2019 г")
+    st.caption("Данные для матрицы были усреднены - с 2008 до 2019 г")
     
     st.header("Мультипликаторы Музейной Деятельности")
 
