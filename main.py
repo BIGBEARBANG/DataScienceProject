@@ -160,7 +160,6 @@ with st.echo(code_location='below'):
         y=1.15,
         xanchor='left',
         yanchor='bottom',
-        bgcolor='white',
         direction='right'
     )]
     fig_par1 = go.Figure(data=traces, layout=dict(updatemenus=updatemenus))
