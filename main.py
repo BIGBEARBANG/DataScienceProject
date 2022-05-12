@@ -95,6 +95,8 @@ with st.echo(code_location='below'):
     df_prop['Institution Code']=institution_code
     list_codes=list(df_prop['Institution Code'].unique().astype(str))
     """## Визуализация датасета о деятельности Музеев Великобритании """
+    
+    """## Распределение основных показателей """
     #BoxPlot
     fig=go.Figure()
     for dataset in list_index:
@@ -123,8 +125,9 @@ with st.echo(code_location='below'):
         height=800)
     st.plotly_chart(fig)
     ### END FROM
+    
 
-
+    """## Корреляционная Матрица"""
     #Heatmap
     df_m_corr=df_m.corr()
     sns.set(rc = {'figure.figsize':(15,8)})
@@ -135,6 +138,8 @@ with st.echo(code_location='below'):
     heat.set_facecolor('xkcd:plum')
     fig_h=heat.get_figure()
     st.pyplot(fig_h)
+    
+    """## Мультипликаторы Музейной Деятельности, группировка по типам институций """
 
     #Parallel Coordinates
     ### FROM: https://stackoverflow.com/questions/64100889/add-dropdown-menu-to-plotly-express-treemap
