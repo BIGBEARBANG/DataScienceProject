@@ -131,7 +131,7 @@ with st.echo(code_location='below'):
     st.header("Корреляция между основыми показателями музейной деятельности")
     #Heatmap
     df_m_corr=df_m.corr()
-    sns.set(rc = {'figure.figsize':(20,10)})
+    sns.set(rc = {'figure.figsize':(15,8)})
     #how to mask an upper triangle: https://python-graph-gallery.com/90-heatmaps-with-various-input-format#
     mask = np.zeros_like(df_m_corr)
     mask[np.triu_indices_from(mask)] = True
