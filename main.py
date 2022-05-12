@@ -126,7 +126,7 @@ with st.echo(code_location='below'):
         height=800)
     st.plotly_chart(fig)
     ### END FROM
-    st.text("Данные визуализованы в виде boxplot графиков, построенных в соответсвии с годовыми наблюдениями и расстортированных по типу данных") 
+    st.subheader("Данные визуализованы в виде boxplot графиков, построенных в соответсвии с годовыми наблюдениями и расстортированных по типу данных") 
 
     st.header("Корреляция между основыми показателями музейной деятельности")
     #Heatmap
@@ -139,7 +139,7 @@ with st.echo(code_location='below'):
     heat.set_facecolor('xkcd:plum')
     fig_h=heat.get_figure()
     st.pyplot(fig_h)
-    st.text("Данные для матрицы были усреднены - с 2008 до 2019 г")
+    st.subheader("Данные для матрицы были усреднены - с 2008 до 2019 г")
     
     st.header("Мультипликаторы Музейной Деятельности")
 
@@ -173,7 +173,7 @@ with st.echo(code_location='below'):
     fig_par1.update_layout(width=900)
     st.plotly_chart(fig_par1)
     
-    st.text("Данные сгруппированы по одному из 4 типов музейных институций")
+    st.subheader("Данные сгруппированы по одному из 4 типов музейных институций")
 
 
 
