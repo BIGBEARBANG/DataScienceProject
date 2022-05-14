@@ -32,9 +32,9 @@ with st.echo(code_location='below'):
         #FROM: https://stackoverflow.com/questions/53714192/pandas-dataframe-how-to-group-columns-together-in-python#
 
     #Настроим Multiindex и сконкатинируем листы в df_fin
+    ###FROM https://stackoverflow.com/questions/53935848/how-to-merge-all-data-frames-in-a-dictionary-in-python
     my_reduce = partial(pd.merge, left_index=True,right_index=True, how='outer')
-    df=reduce(my_reduce, xls.values())
-    #https://stackoverflow.com/questions/53935848/how-to-merge-all-data-frames-in-a-dictionary-in-python#
+    df=reduce(my_reduce, xls.values()) ###END FROM
     df.index.name='Museum'
     df_fin=df.loc[df.index.dropna()]
 
@@ -132,10 +132,10 @@ with st.echo(code_location='below'):
     #Heatmap
     df_m_corr=df_m.corr()
     sns.set(rc = {'figure.figsize':(15,8)})
-    #how to mask an upper triangle: https://python-graph-gallery.com/90-heatmaps-with-various-input-format#
+    #FROM: https://python-graph-gallery.com/90-heatmaps-with-various-input-format
     mask = np.zeros_like(df_m_corr)
     mask[np.triu_indices_from(mask)] = True
-    heat=sns.heatmap(df_m_corr,annot=True,xticklabels=False,mask=mask)
+    heat=sns.heatmap(df_m_corr,annot=True,xticklabels=False,mask=mask) ###END FROM
     heat.set_facecolor('xkcd:plum')
     fig_h=heat.get_figure()
     st.pyplot(fig_h)
